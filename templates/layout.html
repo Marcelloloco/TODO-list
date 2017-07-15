@@ -1,3 +1,4 @@
+<!--This is the Broilerplate for the app containing headline and the input console-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +9,30 @@
 		<header>
 			<h1>This is the greatest TODO list ever</h1>
 		</header>
-
+		<div class="console">
+		<h1>Input form</h1>
+			<form action="/add" method="post">
+			<h6>title</h6>
+			    <input type="text" name="title"><br>
+		    <h6>date</h6>
+			    <input type="date" name="due"><br>
+		    <h6>description</h6>
+			    <textarea name="description" rows="10", cols="40">
+			    </textarea><br>
+			    <input type="submit" value="Send">
+			</form>
+	 	<form action="/show" method="post">
+	    	<input type="submit" value="show all entries">
+		</form> 
+		<h3>Enter title of the entry you are looking for</h3>
+	<form action="/search" method="post">
+			    <input type="text" name="title"><br>
+			    <input type="submit" value="Search!">
+	</form>
+	</div>
+	<div class="content">
 			{% block content %}
 			{% endblock %}
-
+	</div>
 	</body>
 </html>

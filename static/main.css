@@ -1,3 +1,47 @@
 h1 {
-	color: #ff0000;
+	color: #000000;
+	text-align: center;
+}
+
+.console {
+	margin: 3%;
+    border-bottom: solid 3px #16dcdb;
+    border-right: solid 3px #16dcdb;
+    background-color: #fdfdfa;
+    padding: 3%;
+    display: inline-block;
+    top: -19px;
+    position: fixed;
+    top: 46px;
+    width: 23%;
+}
+
+.content{
+	display: inline-block;
+    width: 50%;
+    margin-left: 35%;
+}
+
+.entry{
+    border-bottom: solid 3px #16dcdb;
+    padding: 2%;
+}
+
+.entry h3{
+	display: inline-block;
+	width: 50%;
+}
+
+.entry #state{
+	width: 49%;
+    display: inline-block;
+	text-align: right;
+}
+
+.entry form{
+	display: inline-block;
+}
+
+.entry p{
+	display: block;
 }

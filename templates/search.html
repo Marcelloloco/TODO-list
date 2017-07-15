@@ -1,0 +1,24 @@
+<!--The template, that returns the looked up entry-->
+{% extends "layout.html" %}
+
+{% block content %}
+	{% if entry is not none %}
+	<div class="entry">
+		<h2>{{entry.title}}</h2>
+		<h3>Due Date: {{entry.due}}</h3>
+		<h3 id="state">State: {{entry.state}}</h3>
+	     <p>{{entry.description}}</p>
+
+	<form action="/delete?ID={{entry.id}}" method="post">
+	    <input type="submit" value="delete">
+	</form> 
+
+	<form action="/update?ID={{entry.id}}" method="post">
+	    <input type="submit" value="finished!">
+	</form> 
+	</div>
+	{% else %}
+  		<i>No entry found.</i>
+	{% endif %}
+
+{% endblock %}
